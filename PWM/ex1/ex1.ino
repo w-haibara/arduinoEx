@@ -14,10 +14,12 @@ void flicker1() {
 
   for (duty = 0; duty <= 255; duty++) {
     analogWrite(led_pin, duty);
+    delay(10);
   }
 
   for (duty = 255; duty >= 0; duty--) {
     analogWrite(led_pin, duty);
+    delay(10);
   }
 }
 
@@ -26,6 +28,7 @@ void flicker2() {
   static boolean state = true;
 
   analogWrite(led_pin, duty);
+  delay(10);
 
   switch (duty) {
     case 0:
@@ -48,6 +51,7 @@ void flicker3() {
   static int old_duty = -1;
 
   analogWrite(led_pin, duty & 0xEF);
+  delay(10);
 
   if (duty == 0 && duty < old_duty) {
     duty = 1;
