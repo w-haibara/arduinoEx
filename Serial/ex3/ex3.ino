@@ -2,7 +2,6 @@ const int led_pin = 3;
 
 void setup() {
   pinMode(led_pin, OUTPUT);
-  digitalWrite(led_pin, LOW);
 
   Serial.begin(9600);
 }
