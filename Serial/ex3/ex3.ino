@@ -14,7 +14,7 @@ void loop() {
         digitalWrite(led_pin, LOW);
         break;
       case '1':
-        digitalWrite(led_pin, LOW);
+        digitalWrite(led_pin, HIGH);
         break;
     }
   }
