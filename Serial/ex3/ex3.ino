@@ -7,7 +7,7 @@ void setup() {
 }
 
 void loop() {
-  if (Serial.available()) {
+  if (Serial.available() > 0) {
     byte data = Serial.read();
     switch (data) {
       case '0':
